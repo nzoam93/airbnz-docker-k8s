@@ -1,0 +1,121 @@
+#review-container {
+    /* border-top: 1px solid var(--grey); */
+    border-bottom: 1px solid var(--grey);
+    padding-top: 15px;
+    margin: 15px 0;
+}
+
+#review-form-container {
+    padding: 15px 0;
+}
+
+#review-title-form,
+#review-body-form {
+    padding: 10px 16px;
+    margin: 5px 0;
+    caret-color: #dc1262;
+    border-radius: 4px;
+    width: 95%;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#review-title-form:hover,
+#review-body-form:hover {
+    border-color: #dc1262;
+}
+
+#user-review-info {
+    display: flex;
+    align-items: center;
+}
+
+#review-username {
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+
+#review-time {
+    color: gray;
+}
+
+#review-body,
+#review-title {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+#review-stars {
+    margin-bottom: 15px;
+}
+
+
+
+#review-button-container {
+    display: flex;
+}
+
+.review-button {
+    padding-top: 27px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    width: fit-content;
+}
+
+#log-in-to-review{
+
+    padding: 25px 0 15px 0;
+    font-style: italic;
+}
+
+#edit-review-button{
+    margin-right: 75px;
+}
+
+#submit-review-button {
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    background-color: #0275ff;
+    color: white;
+    cursor: pointer;
+    margin-right: 0.5vw;
+}
+
+.star-rating-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.star-rating{
+    display: flex;
+}
+
+#all-reviews{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 9.5%;
+}
+
+/*collapse all-reviews from 2 columns into 1 column*/
+@media (max-width: 1175px){
+    #all-reviews{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+}
+
+
+/* #username-and-time > :nth-child(1){
+    padding-bottom: 8px;
+    font-weight: bold;
+} */

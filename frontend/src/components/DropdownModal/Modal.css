@@ -1,0 +1,66 @@
+.btn-modal {
+    margin: 5px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 3;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 80px;
+    right: 5%;
+    line-height: 2.2; /* makes it so there is space between the lines */
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.modal-content > * > * {
+    padding: 10px 30px;
+    width: 200px;
+}
+
+.dropdown-modal-content-item{
+    border-bottom: 1px solid var(--grey);
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.modal-content > * > *:hover{
+    background-color: var(--grey);
+}
+
+#profile-button-hamburger{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    width: 77px;
+    height: 42px;
+}
+
+#profile-button-hamburger:hover{
+    box-shadow: 2px 2px 5px grey;
+}
+
+
+#profile-button-hamburger > *{
+    font-size: 19px;
+}

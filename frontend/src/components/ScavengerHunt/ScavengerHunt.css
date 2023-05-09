@@ -1,0 +1,7 @@
+#scavenger-hunt-contents{
+    padding: 20px;
+}
+
+#scavenger-hunt-contents > *{
+    padding: 20px;
+}

@@ -1,0 +1,28 @@
+#progress-container{
+    display: grid;
+    grid-template-columns: 24.5vw 24.5vw;
+    column-gap: 9%;
+    row-gap: 15px;
+}
+
+.progress-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+#progress-rating{
+    display: flex;
+    align-items: center;
+}
+
+#progress-rating > p {
+    padding-left: 10px;
+}
+
+@media (max-width: 1175px){
+    #progress-container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+}

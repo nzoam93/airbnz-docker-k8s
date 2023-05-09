@@ -1,0 +1,195 @@
+
+/* ---------Show Page CSS------------ */
+#listing-title{
+    font-size: 25px;
+    padding: 0 3px;
+}
+
+#second-line-on-show{
+    margin-top: 8px;
+    padding: 5px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#show-page{
+    margin: 0 7vw;
+}
+
+#more-info-show{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*left-hand-side of show*/
+#left-show{
+    width: 54vw;
+    margin-right: 4vw;
+    /* border: 1px solid red; */
+}
+
+#preliminary-info-show{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+#preliminary-info-show > * > *{
+    padding-bottom: 10px;
+}
+
+#profile-picture-show img{
+    padding-top: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+#specialties-show{
+    border-bottom: solid 1px var(--grey);
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#specialties-show > *, #left-offerings-show > *, #right-offerings-show > * {
+    padding-bottom: 3vh;
+}
+
+#description-show{
+    border-bottom: solid 1px var(--grey);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    line-height: 1.6;
+}
+
+#offerings-show{
+    border-bottom: solid 1px var(--grey);
+    /* padding-bottom: 15px;
+    padding-top: 15px; */
+}
+
+#all-offerings-show{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#calendar-show{
+    border-bottom: solid 1px var(--grey);
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.title-show{
+    font-size: 20px;
+    padding: 15px 0px 30px 0;
+}
+
+/*show page grid css*/
+#photos-container{
+    margin: 10px 0;
+    justify-content: center;
+    display: grid;
+    gap: 11px;
+    grid-template-columns: repeat(4, 20.75vw);
+    grid-template-rows: repeat(2, 220px);
+    padding-bottom: 2vh;
+}
+
+/*adds the styling onto the image itself to take up 100% of its alloted grid space*/
+.grid-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*restricts how many rows and columns it takes in the grid*/
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item4{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.item5{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/*rounds the edges of just the imgs on the left and right*/
+.item1 img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.item3 img{
+    border-top-right-radius: 10px;
+}
+
+.item5 img{
+    border-bottom-right-radius: 10px;
+}
+
+/* Makes it so only one image shows if the screen width is small  */
+
+@media (max-width: 800px){
+    #more-info-show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-show{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 600px){
+    #photos-container{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1, 84vw);
+        grid-template-rows: repeat(1, 70vw);
+        padding-bottom: 2vh;
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .item1 img{
+        border-radius: 10px;
+    }
+
+    .item2, .item3, .item4, .item5{
+        display: none;
+    }
+}

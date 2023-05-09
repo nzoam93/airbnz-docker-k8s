@@ -1,0 +1,152 @@
+
+/*---------------listings index CSS--------------*/
+#all-listings{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+#listing-index-item{
+    height: 30vw;
+    width: 21vw;
+    /* border: 1px solid green; */
+    margin: 5px;
+    /* color: rgb(79, 72, 72); */
+}
+
+/* #listing-index-item:hover{
+    height: 500px;
+} */
+
+/* #link{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#link:visited{
+    text-decoration: none;
+} */
+
+
+#listing-info{
+    padding-top: 8px;
+}
+
+/*creates spacing between the items in the list */
+#listing-info > li{
+    padding-top: 5px;
+}
+
+#airbnz-info-second-line{
+    color: #717171;
+}
+
+#house-img img{
+    height: 20vw;
+    width: 20vw;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: all ease-in .4s;
+}
+
+#house-img img:hover{
+    height: 21vw;
+    width: 21vw;
+}
+
+#price-span{
+    color: black;
+    font-weight: normal;
+    font-size: medium;
+}
+
+.price-info{
+    display: flex;
+    align-items: center;
+}
+
+#all-listings-map-container{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 45px;
+}
+
+#all-listings-map{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 22px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+}
+
+#no-listings-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 100px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+
+@media (max-width: 1250px){
+    #all-listings{
+        grid-template-columns: auto auto auto;
+    }
+    #listing-index-item{
+        height: 37vw;
+        width: 27vw;
+    }
+    #house-img img{
+        height: 27vw;
+        width: 27vw;
+    }
+    #house-img img:hover{
+        height: 28vw;
+        width: 28vw;
+    }
+}
+
+@media (max-width: 1000px){
+    #all-listings{
+        grid-template-columns: auto auto;
+    }
+    #listing-index-item{
+        height: 50vw;
+        width: 39vw;
+    }
+    #house-img img{
+        height: 39vw;
+        width: 39vw;
+    }
+    #house-img img:hover{
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 750px){
+    #all-listings{
+        grid-template-columns: auto;
+    }
+    #listing-index-item{
+        height: 80vw;
+        width: 64vw;
+    }
+    #house-img img{
+        height: 64vw;
+        width: 64vw;
+    }
+    #house-img img:hover{
+        height: 65vw;
+        width: 65vw;
+    }
+}

@@ -1,0 +1,53 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--red);
+    height: 50px;
+    margin: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey);
+    /* position: fixed;
+    bottom: 10px; */
+}
+
+
+#footer-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-tag{
+    color: black;
+    padding-top: 1vh;
+    /* margin-bottom: 20px; */
+    padding-bottom: 2vh;
+}
+
+#github-img img{
+    height: 37px;
+    width: 37px;
+}
+
+#linkedin-img img{
+    height: 55px;
+    width: 55px;
+}
+
+#spinner-button{
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+}
+
+/* h4{
+    position: relative;
+    bottom: 2px;
+} */

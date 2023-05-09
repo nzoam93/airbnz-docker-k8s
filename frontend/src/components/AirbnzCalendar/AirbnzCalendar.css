@@ -1,0 +1,32 @@
+/* .CalendarDay__selected_span {
+    background: #82e0aa;
+    color: white;
+    border: 1px solid red;
+} */
+
+.DateInput{
+    width: 126px;
+    /* padding-left: 7px; */
+    margin-left: 7px;
+    padding: none;
+}
+
+.DateInput > *{
+    /* border: 1px solid grey; */
+    border-left: none;
+    font-size: 15px;
+    background-color: transparent;
+    padding-left: 10px;
+    padding: none;
+
+}
+
+.DateInput_input{
+    padding: none;
+}
+
+
+.DateRangePickerInput{
+    border: none;
+    padding: none;
+}

@@ -1,0 +1,144 @@
+#reservation-index-item-container{
+    /* height: fit-content; */
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#reservations-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: fit-content; /*note: this is necessary in order to get the footer to go to the bottom*/
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding: 15px 0;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+
+#reservation-container{
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: end; */
+    /* border: 1px solid red; */
+}
+
+#reservation-index-item{
+    width: 25vw;
+    /* border: 1px solid green; */
+    font-size: 18px;
+    margin-right: 30px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+
+#reservation-house-img img{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: all ease-in .4s;
+}
+
+#reservation-house-img img:hover{
+    height: 26vw;
+    width: 26vw;
+}
+
+#reservation-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#reservation-title{
+    font-size: 19px;
+}
+
+#reservation-info{
+    padding-top: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+#show-page-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.show-page-button{
+    cursor: pointer;
+    text-decoration: underline;
+    width: fit-content;
+    font-size: 15px;
+    padding: 15px;
+}
+
+#reservation-form-modal{
+    z-index: 2;
+}
+
+
+@media (max-width: 1250px){
+    #reservations-container{
+        grid-template-columns: auto auto auto;
+    }
+    #reservation-index-item{
+        height: 37vw;
+        width: 27vw;
+    }
+    #reservation-house-img img{
+        height: 27vw;
+        width: 27vw;
+    }
+    #reservation-house-img img:hover{
+        height: 28vw;
+        width: 28vw;
+    }
+}
+
+@media (max-width: 1000px){
+    #reservations-container{
+        grid-template-columns: auto auto;
+    }
+    #reservation-index-item{
+        height: 50vw;
+        width: 39vw;
+    }
+    #reservation-house-img img{
+        height: 39vw;
+        width: 39vw;
+    }
+    #reservation-house-img img:hover{
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 750px){
+    #reservations-container{
+        grid-template-columns: auto;
+    }
+    #reservation-index-item{
+        height: 80vw;
+        width: 64vw;
+    }
+    #reservation-house-img img{
+        height: 64vw;
+        width: 64vw;
+    }
+    #reservation-house-img img:hover{
+        height: 65vw;
+        width: 65vw;
+    }
+}

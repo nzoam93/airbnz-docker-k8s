@@ -1,0 +1,16 @@
+/* note: most of this CSS is handled in the loginForm */
+
+#icons-on-signup-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-icon{
+    color: blue;
+    cursor: pointer;
+}
+
+.user-icon:focus{
+    color: red;
+}

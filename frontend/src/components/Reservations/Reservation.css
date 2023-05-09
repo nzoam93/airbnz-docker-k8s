@@ -1,0 +1,128 @@
+/*right-hand-side of show page*/
+#right-show{
+    /* margin-right: 4.5vw; */
+    margin-top: 5px;
+    position: sticky;
+    top: 60px;
+    width: 365px;
+    height: 610px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 15px #dddddd;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#right-show > * {
+    margin: 1.5vw;
+}
+
+.price-show{
+    font-size: 20px;
+}
+
+#preliminary-right-info-show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkin-info{
+    width: 315px;
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 24px;
+}
+
+#checkin-container{
+    width: inherit;
+    height: 60px;
+}
+
+.check-in-label-container{
+    display: flex;
+}
+
+.label-check-in{
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 100px;
+    font-size: 12px;
+}
+
+#label-check-out{
+    padding-top: 18px;
+    font-size: 12px;
+}
+
+#guests-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 17px;
+    padding: 15px 49px 15px 15px;
+    border-top: 1px solid black;
+}
+
+#guests-incrementer{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.num-guests-button{
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#num-of-guests{
+    padding: 0 6px;
+    font-size: large;
+    font-weight: 200;
+}
+
+#guests-word-container{
+    font-size: 14px;
+}
+
+#reservation-calendar{
+    width: 300px;
+}
+
+#reserve-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+#reserve-button{
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 317px;
+    height: 50px;
+    /* background-color: var(--red); */
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+
+#charge-show{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+.price-info-item-show{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+#total-show{
+    border-top: solid 2px var(--grey);
+    padding-top: 15px;
+}

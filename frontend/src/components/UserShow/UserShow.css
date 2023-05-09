@@ -1,0 +1,14 @@
+#user-show-page{
+    padding: 30px 15px 0 15px;
+}
+
+#user-reservations-container{
+    padding: 0 0 50px 0;
+}
+
+.user-show-title{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}

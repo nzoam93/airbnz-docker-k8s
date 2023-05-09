@@ -1,0 +1,65 @@
+.filter-icons{
+    display: flex;
+    justify-content: center;
+    color: #717171; /* from the airBNB website */
+    cursor: pointer;
+    margin: 5px;
+    padding-bottom: 12px;
+}
+
+/* .filter-icon{
+    margin: 15px;
+} */
+
+/* .filter-icon {
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+    margin-right: 30px;
+    display: block;
+    --tw-text-opacity: 1;
+    color: rgba(85, 85, 85, var(--tw-text-opacity));
+} */
+
+/*transition for the icon to have grey bar below (per Abbey help)*/
+.filter-icon:after {
+      content: "";
+      display: block;
+      transform: scale(0);
+      margin-bottom: -2px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #b5b5b5;
+      transition: 0.2s ease-in-out;
+}
+
+.filter-icon:hover:after {
+      content: "";
+      color: #171722;
+      display: block;
+      transform: scale(1);
+      transition: 0.2s ease-in;
+}
+
+ /* .filter-icon:hover{
+    border: 1px solid;
+    border-width: 0px 0px 2px 0px;
+    padding: 2px;
+     box-shadow: 0px 2px #888888;
+}  */
+
+.filter-icon:focus{
+    color: grey;
+}
+
+div.filter-item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+}
+
+.caption {
+    display: block;
+}

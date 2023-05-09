@@ -1,0 +1,11 @@
+.map-container{
+    margin-top: 10px;
+    width: 100%;
+    height: 480px;
+}
+
+.all-pins-map-container{
+    margin: 5vh 5vw;
+    width: 90vw;
+    height: 72vh;
+}
