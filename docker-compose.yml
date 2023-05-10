@@ -1,14 +1,15 @@
 version: '3'
 services:
   backend:
-    image: nzoam93/airbnz-backend
+    image: nzoam93/airbnz-backend-eti-host
+    #image: nzoam93/airbnz-backend
     ports:
       - "3001:3001" #...:3001 because I configured puma.rb to listen on port 3001
     networks:
       - my-network
     depends_on:
-      db:
-        condition: service_started
+      - db
+    restart: on-failure
     # Specify that the Rails backend container depends on the Postgres container
     # This ensures that the Postgres container is built and running before the Rails backend container attempts to run migrations and seed data
     command: bash -c "rails db:migrate && rails db:seed && rails server -b 0.0.0.0 -p 3001"

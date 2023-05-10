@@ -23,6 +23,13 @@ module AirbNZ
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    #added by NZ on 5/10/23. This gives the app the ability for it to accept only these two as hosts. Should probably change
+    config.hosts = []
+    config.hosts << "localhost"
+    config.hosts << "eti-lab-31r6124.demos.eticloud.io"
+
+
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
