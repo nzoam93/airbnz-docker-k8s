@@ -1,0 +1,35 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: db-deployment 
+  labels: 
+    app: airbnz
+    tier: db
+spec: 
+  replicas: 1
+  template: 
+    #metadata and spec from the db-pod.yaml file goes here
+    metadata:
+      name: db-pod
+      labels:
+        app: airbnz 
+        tier: db 
+    spec: 
+      containers:
+      - name: db-container 
+        image: nzoam93/airbnz-db
+        env: 
+        - name: POSTGRES_USER
+          value: "myuser"
+        - name: POSTGRES_PASSWORD
+          value: "mypassword"
+        - name: POSTGRES_DB
+          value: "myairbnzdb" #these are gotten from the database.yml file
+                #note: these match the environment variables set in the postgres container in docker 
+        ports: 
+        - containerPort: 5432 #because PG is listening on port 5432
+  selector: 
+    matchLabels:
+      app: airbnz
+
+      

@@ -1,0 +1,19 @@
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: frontend #note: might as well make this consistent with the docker-compose.yaml file
+  labels:
+    name: frontend-service 
+    app: airbnz
+spec: 
+  type: LoadBalancer
+  #type: NodePort #makes it accessible to the outside world 
+  ports: 
+  - port: 80 
+    targetPort: 80
+    #nodePort: 30004 #can be a wide variety of numbers. In this case, we are making it accessible on 30004
+  selector: #copy the labels from the frontend-pod.yaml file into the selector below
+    app: airbnz 
+    tier: frontend 
+    
+    

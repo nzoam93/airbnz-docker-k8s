@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: backend-deployment 
+  labels: 
+    app: airbnz
+    tier: backend
+spec: 
+  replicas: 1 
+  template: 
+    #metadata and spec from the backend-pod.yaml file goes here
+    metadata:
+      name: backend-pod
+      labels:
+        app: airbnz
+        tier: backend 
+    spec: 
+      containers:
+      - name: backend-container 
+        image: nzoam93/airbnz-backend
+        ports:
+        - containerPort: 3001 #because backend is listening on port 3001
+  selector: 
+    matchLabels:
+      app: airbnz
+
+      

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod
+  labels:
+    app: airbnz 
+    tier: backend 
+spec: 
+  containers:
+  - name: backend-container 
+    image: nzoam93/airbnz-backend
+    ports:
+    - containerPort: 3001 #because backend is listening on port 3001

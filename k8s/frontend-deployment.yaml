@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: frontend-deployment 
+  labels: 
+    app: airbnz
+    tier: frontend
+spec: 
+  replicas: 1
+  template: 
+    #metadata and spec from the frontend-pod.yaml file goes here
+    metadata:
+      name: frontend-pod
+      labels:
+        app: airbnz 
+        tier: frontend 
+    spec: 
+      containers:
+        - name: frontend-container 
+          image: nzoam93/airbnz-frontend
+          ports:
+          - containerPort: 80 #because nginx frontend listening on port 80
+  selector: 
+    matchLabels:
+      app: airbnz
+
+      
