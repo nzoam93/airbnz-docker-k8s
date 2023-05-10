@@ -1,0 +1,57 @@
+version: '3'
+services:
+  backend:
+    image: airbnz-backend
+    # image: nzoam93/rails-full-stack-2-backend-all-hosts-allowed
+    # image: nzoam93/rails-full-stack-2-backend
+    # image: backend-trial-stefan
+    ports:
+      - "3001:3001" #...:3001 because I configured puma.rb to listen on port 3001
+    networks:
+      - my-network
+    depends_on:
+      db:
+        condition: service_started
+    # Specify that the Rails backend container depends on the Postgres container
+    # This ensures that the Postgres container is built and running before the Rails backend container attempts to run migrations and seed data
+    command: bash -c "rails db:migrate && rails db:seed && rails server -b 0.0.0.0 -p 3001"
+    # Specify the command to run in the Rails backend container, which includes running migrations and seeding data
+
+    # volumes:
+    #   - .:/app
+    
+    # Mount the current directory (your Rails backend project directory) as a volume in the container
+    # This allows for live code reloading during development
+  frontend:
+    image: airbnz-frontend
+    # image: nzoam93/rails-full-stack-2-frontend-nginx-conf
+    # image: nginx-trial-nginx-conf
+    # image: nginx-trial
+    # image: nzoam93/rails-full-stack-2-frontend-nginx-2
+    # image: nzoam93/rails-full-stack-2-frontend
+    # image: frontend-trial-stefan
+    #note that nginx runs on 80
+    ports: 
+      - "3000:80" #What you expose to the host: what the application is actually running in the container
+    networks:
+      - my-network
+
+    #added to try to serve the backend api 
+    links:
+      - backend
+    # environment:
+    #   - REACT_APP_API_URL=http://backend:3001
+  db:
+    image: airbnz-db
+    # image: db-trial-stefan
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: myairbnzdb
+    ports: 
+      - "5432:5432"  
+    networks:
+      - my-network
+
+networks:
+  my-network:
